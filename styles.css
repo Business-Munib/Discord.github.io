@@ -1,0 +1,76 @@
+body{
+	padding-bottom: 600px;
+}
+
+.artwork-L5TAwQ{
+	display: inline-block;
+	z-index: 0;
+	position: fixed;
+}
+
+.munib{
+	z-index: 100;
+	position: absolute;
+	background-color: gray;
+	margin-top: 8.4%;
+	width: 77%;
+	height: 408px;
+	margin-left: 11.5%;
+	border-radius: 5px;
+	display: flex;
+	padding-top: 4%;
+	background-color: #32323D;
+}
+.welcome{
+	color: rgb(230 230 230);
+}
+.text-gray{
+	color: #B9B9B9;
+}
+.input-label{
+	font-size: 12px
+}
+.bold{
+	font-weight: bold;
+}
+
+.form{
+	flex: 11;
+	padding-right: 7%;
+}
+.input{
+	border: none;
+	border-radius: 5px;
+	background-color: #1D1D24;
+}
+.forgot{
+	color: #2DB9F5;
+	font-size: 14px;
+}
+.forgot:hover{
+	cursor: pointer;
+}
+.need{
+	font-size: 14px;
+	color: #959595;
+}
+.login{
+	background-color: #4B63DB;
+	color: white;
+	width: 96%;
+	height: 45px;
+	border: none;
+	border-radius: 3px;
+}
+.QR{
+	flex: 6;
+	border-radius: 3px;
+}
+.qr-text1{
+	font-size: 22px;
+	color: white;
+}
+.qr-text2{
+	color: #BABABA;
+	font-size: 15px;
+}
