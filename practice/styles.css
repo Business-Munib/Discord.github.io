@@ -1,6 +1,6 @@
-.myDiv{
-	background-color: red;
-	width: 100px;
-	height: 100px;
-	position: relative;
+body{
+	font-style: arial;
+}
+#label{
+	font-size: 20px;
 }

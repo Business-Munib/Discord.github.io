@@ -1,27 +1,38 @@
-const start = document.getElementById("start");
-const div = document.querySelector(".myDiv");
+const label = document.querySelector("#label")
+const add = document.querySelector("#add")
+const take = document.querySelector("#take")
+let count;
 
-start.addEventListener("click", anim);
+label.innerHTML = getCookie("value")
 
-function anim() {
-	let timerId = null;
-	let x = 0;
-	let y = 0;
-	let angle = 0;
-	let num = 99999;
 
-	timerId = setInterval(frame, 5)
-	function frame() {
-		if(angle >= num || x >= 500 || y >= 250){
+console.log(getCookie("value"))
 
-			clearInterval(timerId)
-		}else{
-			x+=2;
-			y++;
-			angle++;
-			div.style.transform = "rotate("+angle+"deg)";
-			div.style.left = x + "px"
-			div.style.top = y + "px"
+add.addEventListener("click", increment)
+take.addEventListener("click", decrement)
+
+function increment() {
+	count = getCookie("value") + 1;
+	document.cookie = `value=${count}; expires=Sun, 1, January, 2060 12:00:00 UTC; path=/`
+	label.textContent = getCookie("value")
+}
+
+function decrement() {
+	count = getCookie("value") - 1;
+	document.cookie = `value=${count}; expires=Sun, 1, January, 2060 12:00:00 UTC; path=/`
+	label.textContent = getCookie("value")
+}
+
+
+function getCookie(name) {
+	const cDecode = decodeURIComponent(document.cookie);
+	const cArray = cDecode.split("; ")
+	let result = null;
+
+	cArray.forEach(element => {
+		if(element.indexOf(name) == 0){
+			result = Number(element.substring(name.length + 1))
 		}
-	}
+	})
+	return result;
 }
